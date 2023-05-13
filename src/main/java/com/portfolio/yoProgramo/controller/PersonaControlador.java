@@ -20,7 +20,7 @@ import org.springframework.security.access.prepost.PreAuthorize;
 
 @RestController
 @RequestMapping("persona")//localhost:8080/experiencia
-@CrossOrigin(origins={"http://localhost:4200"})
+@CrossOrigin(origins={"http://localhost:4200", "https://portfoliojamesserrato-ca1ed.web.app"})
 public class PersonaControlador {
     
     @Autowired 

@@ -40,12 +40,11 @@ public class ExperienciaService implements IExperienciaService {
     public void edit(int id, Experiencia expeMod) {
         Experiencia experiencia = rExperiencia.findById(id).orElseThrow(()-> new NoSuchElementException("No se encuentra la experiencia con el id: "+ id ));
         experiencia.setPuesto(expeMod.getPuesto() !=null ? expeMod.getPuesto() : experiencia.getPuesto());
-        experiencia.setInicio(expeMod.getInicio());
-        experiencia.setFin(expeMod.getFin());
-        experiencia.setDescripcion(expeMod.getDescripcion());
-        experiencia.setImagen(expeMod.getImagen());
-        experiencia.setEmpresa(expeMod.getEmpresa());
-        experiencia.setEsTrabajoActual(expeMod.getEsTrabajoActual());
+        experiencia.setInicio(expeMod.getInicio() !=null ? expeMod.getInicio() : experiencia.getInicio() );
+        experiencia.setFin(expeMod.getFin()!=null ? expeMod.getFin() : experiencia.getFin());
+        experiencia.setDescripcion(expeMod.getDescripcion()!=null ? expeMod.getDescripcion() : experiencia.getDescripcion());
+        experiencia.setImagen(expeMod.getImagen()!=null ? expeMod.getImagen() : experiencia.getImagen());
+        experiencia.setEmpresa(expeMod.getEmpresa()!=null ? expeMod.getEmpresa() : experiencia.getEmpresa());
         rExperiencia.save(experiencia);
     }
 

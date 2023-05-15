@@ -61,7 +61,6 @@ public class Experiencia {
         this.descripcion = descripcion;
         this.imagen = imagen;
         this.empresa = empresa;
-        this.esTrabajoActual = esTrabajoActual;
         this.persona = persona;
     }
 
@@ -121,13 +120,7 @@ public class Experiencia {
         this.empresa = empresa;
     }
 
-    public boolean getEsTrabajoActual() {
-        return esTrabajoActual;
-    }
-
-    public void setEsTrabajoActual(boolean esTrabajoActual) {
-        this.esTrabajoActual = esTrabajoActual;
-    }
+    
      //Opción para que no haga un bug
     @JsonBackReference
     public Persona getPersona() {
